@@ -16,7 +16,7 @@ document.getElementById('donateBtn').addEventListener("click", function () {
   let decrease = getInputBalanceId("decreaseBalance");
 
   if (donateBalance <= 0 || isNaN(donateBalance)) {
-    alert("Soory Mama");
+    alert(" Soory Invalid ");
     return;
 
   } else {
@@ -40,12 +40,11 @@ getInputDonationButton("donate").addEventListener('click', function () {
   donate.classList.add('bg-primary');
   let historyShow = document.getElementById('donateShow');
   historyShow.classList.remove('hidden');
+  donateShow.classList.add('lg:flex');
 
 });
 // History Button
 document.getElementById("history").addEventListener('click', function () {
-  let showHistory = document.getElementById("history-section");
-  showHistory.classList.remove('hidden');
   let title = document.getElementById("title").innerText;
   let donate = document.getElementById('donate')
   donate.classList.remove('bg-primary');
@@ -53,8 +52,11 @@ document.getElementById("history").addEventListener('click', function () {
   history.classList.add('bg-primary');
   let donateShow = document.getElementById('donateShow');
   donateShow.classList.add('hidden');
+  donateShow.classList.remove('lg:flex');
 
-  const historyItem = document.createElement("div");
+  //  History 
+  let showHistory = document.getElementById("history-section");
+  showHistory.classList.remove('hidden');
 
   historyItem.className = "bg-white p-3 rounded-md "
   historyItem.innerHTML = `
@@ -62,6 +64,9 @@ document.getElementById("history").addEventListener('click', function () {
   <p> ${new Date().toDateString()} </p>
 
   `
+
+  const historyContainer = document.getElementById("history-list");
+  historyContainer.appendChild(historyItem);
 });
 
 // Blog Start
