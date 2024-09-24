@@ -28,6 +28,8 @@ document.getElementById('donateBtn').addEventListener("click", function () {
     decreseBanlance.innerText = decreaseAmount;
     increseBanlance.innerText = increaseAmount;
   }
+  let modal = document.getElementById("openModel");
+  modal.classList.remove('hidden');
 
 
 })
@@ -41,6 +43,8 @@ getInputDonationButton("donate").addEventListener('click', function () {
   let historyShow = document.getElementById('donateShow');
   historyShow.classList.remove('hidden');
   donateShow.classList.add('lg:flex');
+  let mdl = document.getElementById("mdl");
+  mdl.classList.add('btn');
 
 });
 // History Button
@@ -53,6 +57,11 @@ document.getElementById("history").addEventListener('click', function () {
   let donateShow = document.getElementById('donateShow');
   donateShow.classList.add('hidden');
   donateShow.classList.remove('lg:flex');
+  let modal = document.getElementById("my_modal_1");
+  modal.classList.add('hidden');
+  let mdl = document.getElementById("mdl");
+  mdl.classList.remove('btn');
+
 
   //  History 
   let showHistory = document.getElementById("history-section");
@@ -67,6 +76,9 @@ document.getElementById("history").addEventListener('click', function () {
 
   const historyContainer = document.getElementById("history-list");
   historyContainer.appendChild(historyItem);
+
+
+
 });
 
 // Blog Start
