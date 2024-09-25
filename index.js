@@ -28,7 +28,7 @@ document.getElementById('donateBtn').addEventListener("click", function () {
     decreseBanlance.innerText = decreaseAmount;
     increseBanlance.innerText = increaseAmount;
   }
-  let modal = document.getElementById("openModel");
+  let modal = document.getElementById("model");
   modal.classList.remove('hidden');
 
 
@@ -67,15 +67,16 @@ document.getElementById("history").addEventListener('click', function () {
   let showHistory = document.getElementById("history-section");
   showHistory.classList.remove('hidden');
 
+  let historyItem = document.createElement("div");
   historyItem.className = "bg-white p-3 rounded-md "
   historyItem.innerHTML = `
-  <h2>${donateBalance} ${title}  </h2>
-  <p> ${new Date().toDateString()} </p>
+  <h2> lorem40 </h2>
+  <p>  </p>
 
   `
 
   const historyContainer = document.getElementById("history-list");
-  historyContainer.appendChild(historyItem);
+  historyContainer.append(historyItem);
 
 
 
@@ -85,6 +86,33 @@ document.getElementById("history").addEventListener('click', function () {
 getInputDonationButton("blog").addEventListener('click', function () {
   window.location.href = "Blog.html"
 })
+document.getElementById("Home").addEventListener('click', function () {
+  window.location.href = "index.html"
+})
 
+function dom() {
+  let answerDom = document.getElementById("answer");
+  answerDom.classList.remove('hidden');
+  let answerDom1 = document.getElementById("answer4");
+  answerDom1.classList.add('hidden');
+}
+function dom2() {
+  let answerDom = document.getElementById("answer2");
+  answerDom.classList.remove('hidden');
+  let answerDom1 = document.getElementById("answer");
+  answerDom1.classList.add('hidden');
+}
+function dom3() {
+  let answerDom = document.getElementById("answer3");
+  answerDom.classList.remove('hidden');
+  let answerDom1 = document.getElementById("answer2");
+  answerDom1.classList.add('hidden');
+}
+function dom4() {
+  let answerDom = document.getElementById("answer4");
+  answerDom.classList.remove('hidden');
+  let answerDom1 = document.getElementById("answer3");
+  answerDom1.classList.add('hidden');
+}
 
 
