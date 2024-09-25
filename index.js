@@ -47,6 +47,11 @@ getInputDonationButton("donate").addEventListener('click', function () {
   mdl.classList.add('btn');
 
 });
+document.getElementById("donationAmout").addEventListener("click", function () {
+  let modal = document.getElementById("model");
+  modal.classList.add('hidden');
+
+})
 // History Button
 document.getElementById("history").addEventListener('click', function () {
   let title = document.getElementById("title").innerText;
@@ -85,9 +90,11 @@ document.getElementById("history").addEventListener('click', function () {
 // Blog Start
 getInputDonationButton("blog").addEventListener('click', function () {
   window.location.href = "Blog.html"
+
 })
-document.getElementById("Home").addEventListener('click', function () {
-  window.location.href = "index.html"
+// home Button
+document.getElementById("blog").addEventListener('click', function () {
+
 })
 
 function dom() {
